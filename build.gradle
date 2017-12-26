@@ -1,0 +1,34 @@
+plugins {
+    id 'groovy'
+    id 'maven-publish'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    // groovy
+    compile "org.codehaus.groovy:groovy-all:${groovyVersion}"
+
+    // springy things
+    compile "org.springframework:spring-beans:${springVersion}"
+    compile "org.springframework:spring-web:${springVersion}"
+    compile "org.springframework:spring-webmvc:${springVersion}"
+
+    // database
+    compile 'org.springframework.data:spring-data-jpa:1.11.7.RELEASE'
+    compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final'
+
+    // server/logging
+    compile 'javax.servlet:javax.servlet-api:3.0.1'
+    compile 'javax.validation:validation-api:1.1.0.Final'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.9.0'
+    compile 'org.slf4j:slf4j-api:1.7.25'
+
+    // testing dependencies
+    testCompile 'org.springframework:spring-test:4.3.11.RELEASE'
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'com.blogspot.toomuchcoding:spock-subjects-collaborators-extension:1.2.1'
+    testCompile 'org.spockframework:spock-spring:1.1-groovy-2.4'
+}
