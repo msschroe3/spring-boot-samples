@@ -1,6 +1,11 @@
 plugins {
     id 'groovy'
-    id 'maven-publish'
+    id "io.spring.dependency-management" version "1.0.0.RELEASE"
+}
+
+jar {
+    baseName = 'spring-boot-samples-lib'
+    version = '0.0.1-SNAPSHOT'
 }
 
 repositories {

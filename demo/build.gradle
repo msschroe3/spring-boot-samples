@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'groovy'
+    id 'org.springframework.boot'  version '1.5.6.RELEASE'
+}
+
+jar {
+    version = '0.0.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(':lib')
+
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile ('org.springframework.boot:spring-boot-starter-actuator')
+    compile ('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+
+    runtime ('com.h2database:h2')
+
+    // testing dependencies
+    testCompile 'org.springframework:spring-test:4.3.11.RELEASE'
+    testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testCompile 'com.blogspot.toomuchcoding:spock-subjects-collaborators-extension:1.2.1'
+    testCompile 'org.spockframework:spock-spring:1.1-groovy-2.4'
+}

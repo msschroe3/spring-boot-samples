@@ -51,7 +51,6 @@ class SpecificationFactorySpec extends Specification {
         result
     }
 
-
     def "buildSpecifications with one field"() {
         given:
         def request = new TestSearchRequest([

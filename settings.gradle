@@ -1,1 +1,5 @@
-rootProject.name='jpa-specifications-search'
+rootProject.name='spring-boot-samples'
+
+include 'lib'
+include 'demo'
+
